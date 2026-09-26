@@ -4,18 +4,20 @@ Docker ile öğrenme amaçlı geliştirilen basit bir Trello klonu. Board, List 
 
 ## Teknolojiler
 - Backend: Node.js, Express, Sequelize
+- Frontend: React (Vite)
 - Veritabanı: MySQL 8.0
-- Docker & Docker Compose
+- Docker & Docker Compose (multi-stage build, healthcheck)
 
 ## Çalıştırma
 
 1. Bu repoyu klonla
-2. Proje kökünde bir `.env` dosyası oluştur (örnek için `.env.example`'a bak)
-3. Şunu çalıştır:
+2. `backend/` klasöründe `.env.example`'ı `.env` olarak kopyala, kendi değerlerini gir
+3. Proje kökünde:
 \`\`\`bash
-docker-compose up
+docker-compose up --build
 \`\`\`
-4. API `http://localhost:5000` üzerinden erişilebilir olacak
+4. Frontend: `http://localhost:3000`
+5. Backend API: `http://localhost:5000`
 
 ## API Endpoint'leri
 - `GET/POST /api/boards`
